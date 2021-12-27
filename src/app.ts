@@ -1,6 +1,6 @@
 import express from 'express';
 import establishimentRoutes from './routes/establishimentRoutes';
-import cors from 'cors';
+// import cors from 'cors';
 
 export class App {
   private express: express.Application;
@@ -20,7 +20,7 @@ export class App {
   private middleware(): void {
     this.express.use(express.urlencoded({ extended: false }));
     this.express.use(express.json());
-    this.express.use(cors());
+    // this.express.use(cors());
   }
 
   private routes(): void {
