@@ -31,7 +31,6 @@ export class AuthController {
   }
 
   public static async home(req: Request, res: Response): Promise<Response> {
-    console.log(req.user);
     return res.status(httpStatus.OK).json({ message: 'adsdas' });
   }
 }
