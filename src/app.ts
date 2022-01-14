@@ -1,6 +1,7 @@
-import express from 'express';
-import establishimentRoutes from './routes/establishimentRoutes';
-// import cors from 'cors';
+import express, { Router, Request, Response, NextFunction } from 'express';
+import database from './database/database';
+import authRoutes from './routes/authRoutes';
+import 'reflect-metadata';
 
 export class App {
   private express: express.Application;
@@ -8,6 +9,7 @@ export class App {
 
   constructor() {
     this.express = express();
+    this.database();
     this.middleware();
     this.routes();
     this.listen();
@@ -17,14 +19,17 @@ export class App {
     return this.express;
   }
 
+  private database(): void {
+    database.connection();
+  }
+
   private middleware(): void {
     this.express.use(express.urlencoded({ extended: false }));
     this.express.use(express.json());
-    // this.express.use(cors());
   }
 
   private routes(): void {
-    this.express.use('/', establishimentRoutes);
+    this.express.use('/auth', authRoutes);
   }
 
   private listen(): void {
