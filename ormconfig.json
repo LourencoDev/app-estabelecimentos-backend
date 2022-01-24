@@ -5,14 +5,14 @@
   "username": "root",
   "password": "TigreDosDados20!",
   "database": "app_estabelecimentos",
-  "synchronize": true,
   "entities": [
-    "dist/models/*.js"
+    "src/models/*"
   ],
   "migrations": [
-    "dist/database/migrations/*.js"
+    "src/database/migrations/*"
   ],
   "cli": {
+    "entitiesDir": "src/models",
     "migrationsDir": "src/database/migrations"
   }
 }
