@@ -1,10 +1,10 @@
 {
-  "type": "postgresql",
-  "host": "ec2-3-232-22-121.compute-1.amazonaws.com",
-  "port": 5432,
-  "username": "mldrwhldtyojri",
-  "password": "80cf70369960f7919c857f6c973432332267a1befbfb179ee7e82328447682ea",
-  "database": "d7tf8rja8usgpp",
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "TigreDosDados20!",
+  "database": "app_estabelecimentos",
   "entities": [
     "src/models/*.ts"
   ],
