@@ -3,13 +3,13 @@
 @Entity('user')
  class User {
   Generated('uuid')
-  @PrimaryColumn('int')
+  @PrimaryColumn('varchar')
   
   
-  Column()
+  Column('varchar')
   
   
-  Column()
+  Column('varchar')
   
   
   CreateDateColumn()

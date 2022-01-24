@@ -18,7 +18,7 @@ var _AuthService = require('../services/AuthService');
       }
 
       req.user = user;
-      delete req.user.password;
+      req.user.password = '';
       
       return next();
     } catch (err) {

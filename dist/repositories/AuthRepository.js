@@ -3,7 +3,8 @@ var _typeorm = require('typeorm');
 var _AppError = require('../utilities/errors/AppError');
 var _User = require('./../models/User');
 
- class AuthRepository {  
+ class AuthRepository {
+
    static async register(auth) {
     const ormRepository = _typeorm.getRepository.call(void 0, _User.User);
     let response = null;

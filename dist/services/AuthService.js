@@ -1,5 +1,5 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _AppError = require('./../utilities/errors/AppError');
-var _AuthRepository = require('./../repositories/AuthRepository');
+"use strict";Object.defineProperty(exports, "__esModule", {value: true}); function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }var _AuthRepository = require('./../repositories/AuthRepository');
+var _AppError = require('./../utilities/errors/AppError');
 var _bcrypt = require('bcrypt'); var _bcrypt2 = _interopRequireDefault(_bcrypt);
 
 var _httpstatus = require('http-status'); var _httpstatus2 = _interopRequireDefault(_httpstatus);
@@ -40,6 +40,9 @@ var _constants = require('../utilities/constants'); var _constants2 = _interopRe
       throw new (0, _AppError.AppError)(_httpstatus2.default.NOT_FOUND, 'Usuário não encontrado!');
     }
 
-    return user;
+    return {
+      email: 'a',
+      password: 'b',
+    };
   }
 } exports.AuthService = AuthService;
