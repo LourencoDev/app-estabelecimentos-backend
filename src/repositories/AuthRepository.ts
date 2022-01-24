@@ -3,7 +3,8 @@ import { getRepository, Repository } from 'typeorm';
 import { AppError } from '../utilities/errors/AppError';
 import { User } from './../models/User';
 
-export class AuthRepository {  
+export class AuthRepository {
+
   public static async register(auth: any) {
     const ormRepository: Repository<User> = getRepository(User);
     let response = null;

@@ -1,5 +1,5 @@
-import { AppError } from './../utilities/errors/AppError';
 import { AuthRepository } from './../repositories/AuthRepository';
+import { AppError } from './../utilities/errors/AppError';
 import bcrypt from 'bcrypt';
 import { UserInterface } from '../interfaces/UserInterface';
 import httpStatus from 'http-status';
@@ -33,13 +33,16 @@ export class AuthService {
     return { token };
   }
 
-  public static async getByEmail(email: string) {
+  public static async getByEmail(email: string): Promise<UserInterface> {
     const user = await AuthRepository.selectOne({ email });
 
     if (!user) {
       throw new AppError(httpStatus.NOT_FOUND, 'Usuário não encontrado!');
     }
 
-    return user;
+    return {
+      email: 'a',
+      password: 'b',
+    };
   }
 }

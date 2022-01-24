@@ -5,6 +5,7 @@
   "username": "root",
   "password": "TigreDosDados20!",
   "database": "app_estabelecimentos",
+  "synchronize": true,
   "entities": [
     "src/models/*.ts"
   ],

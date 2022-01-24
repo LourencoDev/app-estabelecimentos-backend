@@ -3,13 +3,13 @@ import { Column, CreateDateColumn, DeleteDateColumn, Entity, Generated, PrimaryC
 @Entity('user')
 export class User {
   @Generated('uuid')
-  @PrimaryColumn('int')
-  id!: number;
+  @PrimaryColumn('varchar')
+  id!: string;
   
-  @Column()
+  @Column('varchar')
   email!: string;
   
-  @Column()
+  @Column('varchar')
   password!: string;
   
   @CreateDateColumn()
