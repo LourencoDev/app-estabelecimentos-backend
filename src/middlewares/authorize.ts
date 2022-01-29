@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { NextFunction, Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import httpStatus from 'http-status';
 import constants from '../utilities/constants';
 import { AuthService } from '../services/AuthService';
