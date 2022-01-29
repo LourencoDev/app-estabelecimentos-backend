@@ -2,7 +2,7 @@ const constants = {
   JWT: {
     SECRET_KEY: 'BY5173M74PEX',
   },
-  IS_PROD: true,
+  IS_PROD: false,
 }
 
 export default constants;

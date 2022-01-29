@@ -1,3 +1,5 @@
-"use strict";var _app = require('./app');
-
-new (0, _app.App)().getApp();
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var app_1 = require("./app");
+new app_1.App().getApp();
+//# sourceMappingURL=index.js.map

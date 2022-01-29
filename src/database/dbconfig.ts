@@ -2,6 +2,7 @@ const OrmConfigProd = {
   type: "mysql",
   host: "localhost",
   port: 3306,
+  synchronize: true,
   username: "root",
   password: "TigreDosDados20!",
   database: "app_estabelecimentos",
@@ -12,8 +13,8 @@ const OrmConfigProd = {
     "../../dist/database/migrations/*"
   ],
   cli: {
-    "entitiesDir": "../../dist/models",
-    "migrationsDir": "../../dist/database/migrations"
+    entitiesDir: "../../dist/models",
+    migrationsDir: "../../dist/database/migrations"
   }
 }
 
@@ -21,6 +22,7 @@ const OrmConfigDev = {
   type: "mysql",
   host: "localhost",
   port: 3306,
+  synchronize: true,
   username: "root",
   password: "TigreDosDados20!",
   database: "app_estabelecimentos",
@@ -31,8 +33,8 @@ const OrmConfigDev = {
     "src/database/migrations/*"
   ],
   cli: {
-    "entitiesDir": "src/models",
-    "migrationsDir": "src/database/migrations"
+    entitiesDir: "src/models",
+    migrationsDir: "src/database/migrations"
   }
 }
 

@@ -8,7 +8,7 @@
   "scripts": {
     "start": "ts-node dist/index.js",
     "dev": "nodemon src/index.ts",
-    "build": "sucrase ./src -d ./dist --transforms typescript,imports",
+    "build": "tsc",
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "migration-generate": "yarn typeorm migration:create -n name",
     "migration": "yarn typeorm migration:run"
@@ -34,7 +34,6 @@
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "ts-node": "^10.4.0",
-    "typeorm": "^0.2.41",
-    "uuid": "^8.3.2"
+    "typeorm": "^0.2.41"
   }
 }

@@ -5,7 +5,7 @@ import { AuthControllerFilter } from './filters/AuthControllerFilter';
 
 export class AuthController {
   public static async register(req: Request, res: Response): Promise<Response> {
-    let response = null;
+    let response: any = null;
 
     try {
       const data = await AuthControllerFilter.registerFilter(req.body);
@@ -18,7 +18,7 @@ export class AuthController {
   }
 
   public static async login(req: Request, res: Response): Promise<Response> {
-    let response = null;
+    let response: any = null;
 
     try {
       const data = await AuthControllerFilter.registerFilter(req.body);
@@ -28,9 +28,5 @@ export class AuthController {
     }
 
     return res.status(httpStatus.OK).json(response);
-  }
-
-  public static async home(req: Request, res: Response): Promise<Response> {
-    return res.status(httpStatus.OK).json({ message: 'adsdas' });
   }
 }

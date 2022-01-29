@@ -1,13 +1,14 @@
 import httpStatus from 'http-status';
 import { getRepository, Repository } from 'typeorm';
 import { AppError } from '../utilities/errors/AppError';
-import { User } from './../models/User';
+import { User } from '../models/User';
+import 'reflect-metadata';
 
 export class AuthRepository {
 
   public static async register(auth: any) {
     const ormRepository: Repository<User> = getRepository(User);
-    let response = null;
+    let response: any = null;
 
     try {
       response = await ormRepository.save(auth);
@@ -20,7 +21,7 @@ export class AuthRepository {
 
   public static async selectOne(options: any) {
     const ormRepository: Repository<User> = getRepository(User);
-    let response = null;
+    let response: any = null;
 
     try {
       response = await ormRepository.findOne(options);

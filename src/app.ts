@@ -1,7 +1,6 @@
-import express, { Router, Request, Response, NextFunction } from 'express';
+import express from 'express';
 import database from './database/database';
 import authRoutes from './routes/authRoutes';
-import 'reflect-metadata';
 
 export class App {
   private express: express.Application;
