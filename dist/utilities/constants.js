@@ -4,7 +4,7 @@ var constants = {
     JWT: {
         SECRET_KEY: 'BY5173M74PEX',
     },
-    IS_PROD: false,
+    IS_PROD: true,
 };
 exports.default = constants;
 //# sourceMappingURL=constants.js.map
