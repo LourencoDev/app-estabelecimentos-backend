@@ -1,6 +1,6 @@
 const OrmConfigProd = {
   type: "mysql",
-  host: "localhost",
+  host: "192.168.0.11",
   port: 3306,
   synchronize: true,
   username: "root",
